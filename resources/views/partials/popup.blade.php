@@ -1,7 +1,7 @@
 <div class="popup" id="popup" style="display: none;">
     <div class="popup-content">
         <h2 class="popup-title">Add Music</h2>
-        <form id="music-form" class="music-form" action="{{ route('music.store') }}" method="POST" enctype="multipart/form-data">
+        <form id="music-form" class="music-form song-form" action="{{ route('music.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label for="music-name" class="form-label">Music Name</label>

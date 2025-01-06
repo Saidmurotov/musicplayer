@@ -6,21 +6,22 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function index()
+    public function index() # oddiy foydalanuvchilarning asosiy sahifasi
     {
-        $musics = Music::all();
+        $musics = Music::all(); # barcha musiqalarni yuklaydi
         $sum = Music::all()->sum(function ($music) {
             return 1;
-        });
+        }); # musiqalarni sonini hisoblaydi
         return view('user.home', compact('musics', 'sum')); // Create a Blade file for user dashboard
     }
-    public function search(Request $request)
+    public function search(Request $request) # qidirish funksiyasi
     {
-        $query = $request->input('query');
+        $query = $request->input('query'); # query yani kalit so'zniyuklab oladi
 
+//        qidirish jarayoni
         if ($query) {
             // Search by music name or artist
-            $musics = Music::where('name', 'LIKE', "%$query%")
+            $musics = Music::where('name', 'LIKE', "%$query%") # bu yerda % belgisi % boshida va oxirida boshqa belgilar bolishi mumkinligini bildiradi
                 ->orWhere('artist', 'LIKE', "%$query%")
                 ->get();
         } else {

@@ -66,7 +66,7 @@
     border: none;
 }
 .navigation_name button i, .navigation_playlist-header p i, .navigation_playlist-sort button i{
-    color: #575656;
+    color: red;
     font-size: 20px;
 }
 /*---------------------------------------------------------------------*/
@@ -127,7 +127,14 @@ li{
     justify-content: space-between;
     align-items: center;
 }
+.navigation_playlist-sort{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
 
+}
 .navigation_playlist-sort p{
     display: flex;
     gap: 13px;
@@ -178,7 +185,7 @@ li{
 .content-start{
     position: relative;
     height: 100%;
-    background: url("./img/back.png") no-repeat center center / cover;
+    /*background: url("./img/back.png") no-repeat center center / cover;*/
 }
 
 .content_header-verify{
@@ -320,7 +327,7 @@ li{
     flex-direction: column;
     position: absolute;
     bottom: 0;
-    width: 100%;
+    width: 80%;
     align-items: center;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
 }
@@ -659,43 +666,56 @@ input[type="file"] {
     background-color: #f8d7da;
     border-color: #f5c6cb;
 }
-.music-item a{
-    color: rgb(156, 156, 156);
-    font-size: 16px;
+
+.btn-exit{
+    background: red;
+    padding: 10px 15px;
+    border-radius: 10px;
+    COLOR: #fff;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.alert-success{
+    top: 20px;
+    left: 45%;
+    position: absolute;
+}
+
+.ranked-list__delete{
+    background: transparent;
+
+    border: none;
+}
+.ranked-list__delete i{
+    color: red;
+}
+.content_header-right button{
+    background: red;
+}
+.content_header-start{
+    align-items: flex-start;
+}
+.content_header{
+    height: 150px;
+}
+.content_playlist-songs{
+    margin-bottom: 80px;
+}
+.ranked-list{
+    height: 550px;
+}
+.music-list{
+    width: 100%;
 }
 .music-item{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 10px;
+    color: #2d3748;
+    gap: 8px;
 }
-.exit{
-    background-color: #ff4d4f;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 10px;
-}
-.ranked-list__artist, .ranked-list__duration, .menu_ranked i {
+.music-item a{
+    color: green;
     font-size: 20px;
-    color: rgb(131, 131, 131);
-}
-.alert {
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    font-size: 16px;
-    position: absolute;
-    top: 20px;
-    left: 50%;
-}
-.ranked-list__delete{
-    background: transparent;
-    border: none;
 }

@@ -5,16 +5,17 @@
 </head>
 <body>
 <div class="wrapper">
-    @include('partials.navigation')
 
     <div class="content">
         @yield('content')
     </div>
+    @include('partials.navigation')
 
-    @include('partials.audio-player')
-
-    @include('partials.popup')
-    @include('partials.delete-popup')
+    @auth
+        @include('partials.audio-player')
+        @include('partials.popup')
+        @include('partials.delete-popup')
+    @endauth
     @include('partials.messages')
 </div>
 <script src="{{ asset('script.js') }}"></script>

@@ -16,12 +16,6 @@
         </div>
     </div>
     <div class="content_playlist">
-        <div class="content_playlist-list">
-            <ul>
-                <li class="active">Hammasi</li>
-              
-            </ul>
-        </div>
         <div class="content_playlist-songs" id="song-list">
             @include('partials.song-list')
         </div>

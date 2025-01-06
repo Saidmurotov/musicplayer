@@ -7,12 +7,12 @@ use App\Models\Music;
 
 class LikedMusicController extends Controller
 {
-    public function like(Request $request, $musicId)
+    public function like(Request $request, $musicId) # musiqaga layk bosihs
     {
         $user = auth()->user();
 
         if (!$user->likedMusicItems->contains($musicId)) {
-            LikedMusic::create([
+            LikedMusic::create([ # malumotlar bazasiga qaysi foydalanuvchi qaysi musiqaga layk bosganini saqlaydi
                 'user_id' => $user->id,
                 'music_id' => $musicId,
             ]);
@@ -30,7 +30,7 @@ class LikedMusicController extends Controller
             ->first();
 
         if ($likedMusic) {
-            $likedMusic->delete();
+            $likedMusic->delete(); # layk bosilgani o'chirib tashlaydi
         }
 
         return back()->with('success', 'Music unliked successfully!');

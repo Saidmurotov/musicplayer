@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="home-container">
-        <h1>Jalol ohanglari</h1>
+        <h1>Sulaymon ohanglari</h1>
         <p>Sizning sevimli musiqa platformangiz.</p>
 
         @if(Auth::check())
